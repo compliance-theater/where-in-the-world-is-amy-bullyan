@@ -30,11 +30,23 @@ export default function FaqPage() {
           {faqs.map((faq) => (
             <article className="faq-item" key={faq.question}>
               <h2>{faq.question}</h2>
-              <p>{faq.answer}</p>
+              <p>{renderAnswer(faq)}</p>
             </article>
           ))}
         </div>
       </section>
     </main>
   );
+}
+
+function renderAnswer(faq: (typeof faqs)[number]) {
+  if (!faq.emphasis) {
+    return faq.answer;
+  }
+
+  const pattern = new RegExp(`\\b(${faq.emphasis.join("|")})\\b`, "gi");
+  return faq.answer.split(pattern).map((part, index) => {
+    const shouldEmphasize = faq.emphasis?.some((word) => word.toLowerCase() === part.toLowerCase());
+    return shouldEmphasize ? <strong key={`${part}-${index}`}>{part}</strong> : part;
+  });
 }

@@ -12,7 +12,8 @@ export const faqs = [
   {
     question: "What do the red boxes mean?",
     answer:
-      "Red boxes mark private family or minor identifying information removed before publication. Each document includes an index identifying those redactions. Other redactions appear as the district provided them."
+      "Red boxes mark private family or minor identifying information removed before publication. Each document includes an index identifying those redactions. Other redactions appear as the district provided them. While preparing these documents, we found it a little bit funny that with only 20% of the record to work with, we were still able to redact all of our private data without destroying the meaning of the record we had been presented with. The red boxes show how information could be shared contrasted to how it was shared.",
+    emphasis: ["could", "was"]
   },
   {
     question: "Are these district records?",
