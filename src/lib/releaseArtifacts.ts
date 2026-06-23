@@ -130,6 +130,20 @@ export const releaseArtifacts: ReleaseArtifact[] = [
       "communications/evidence/nothing_to_see_here_2026-06-23/nothing_to_see_here.pdf"
   },
   {
+    id: "homs-investigation-reports-redacted-packet",
+    lane: "PLSAS",
+    title: "HOMS Investigation Reports Redacted Packet",
+    eyebrow: "Primary investigation records",
+    date: "2026-06-22",
+    pages: 6,
+    radioactiveness: "9.0/10",
+    description:
+      "Release-safe redacted investigation-report packet with document-level indexes identifying private-data redactions.",
+    href: "/release-assets/plsas/homs-investigation-reports-redacted-shareable-packet.pdf",
+    sourcePath:
+      "report_output/homs_investigation_reports_redacted_packet_2026-06-22/HOMS_Investigation_Reports_Redacted_Shareable_Packet.pdf"
+  },
+  {
     id: "governance-catastrophic-record-integrity",
     lane: "PLSAS",
     title: "Governance Notice: Catastrophic Record Integrity Failure",
