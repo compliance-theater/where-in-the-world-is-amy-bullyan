@@ -15,8 +15,8 @@ export default function FaqPage() {
         <Image
           src="/images/form-builder-hero.png"
           alt="Dismantle Systems of Oppression"
-          width={1664}
-          height={1216}
+          width={2078}
+          height={1088}
           priority
           sizes="100vw"
         />

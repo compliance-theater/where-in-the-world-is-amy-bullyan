@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Form Builder"
+  title: "Build a Request",
+  description:
+    "Generate FERPA/MGDPA request and correction PDFs for identifying who accessed student records and challenging improper access."
 };
 
 export default function FormBuilderPage() {
@@ -13,8 +15,8 @@ export default function FormBuilderPage() {
         <Image
           src="/images/form-builder-hero.png"
           alt="Dismantle Systems of Oppression"
-          width={1664}
-          height={1216}
+          width={2078}
+          height={1088}
           priority
           sizes="100vw"
         />
