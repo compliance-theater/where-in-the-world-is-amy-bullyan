@@ -46,6 +46,7 @@ a {
   align-items: center;
   color: var(--cyan);
   display: flex;
+  font-size: clamp(18px, 2.2vw, 23px);
   font-weight: 900;
   gap: 10px;
   height: auto;
@@ -530,11 +531,12 @@ button:disabled {
   }
 
   .brand {
-    white-space: normal;
+    font-size: 18px;
+    white-space: nowrap;
   }
 
   .brand span {
-    max-width: 170px;
+    max-width: none;
   }
 
   nav {
