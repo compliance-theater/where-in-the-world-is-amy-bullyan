@@ -19,6 +19,10 @@ export default function PlsasPage() {
             Suspected suppression of maltreatment reporting, bad-faith Title IX investigative posture, and suspected
             record access and classification violations.
           </p>
+          <p className="redaction-note">
+            Some private identifying information has been redacted. Our redactions appear in red and are indexed inside
+            each document. Any other redactions shown are part of the record as it was provided.
+          </p>
           <p>Redacted materials only. Native originals stay off the public table.</p>
         </div>
         <ReleaseStats artifacts={artifacts} />

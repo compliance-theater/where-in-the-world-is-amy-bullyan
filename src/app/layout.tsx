@@ -5,7 +5,7 @@ import { Nav } from "@/components/Nav";
 import "./globals.css";
 
 const description =
-  "Records raise questions: catastrophic record integrity, FERPA mapping definitions, all responsive data provided, complaint dismissed, and board receipt with no visible substantive response.";
+  "Redacted school-record packets, board receipt proofs, and FERPA/MGDPA tools for mapping who saw student records and why.";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mystery Compliance Theatre 2000",
     description,
+    siteName: "Mystery Compliance Theatre 2000",
     type: "website",
     images: [
       {

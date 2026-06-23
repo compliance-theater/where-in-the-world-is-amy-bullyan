@@ -262,6 +262,12 @@ button {
   font-size: 17px;
 }
 
+.redaction-note {
+  border-left: 3px solid var(--pink);
+  color: var(--text) !important;
+  padding-left: 14px;
+}
+
 .stats-band {
   border-bottom: 1px solid var(--line);
   border-top: 1px solid var(--line);
