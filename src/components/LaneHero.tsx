@@ -4,15 +4,23 @@ import { RandomRecordButton } from "@/components/RandomRecordButton";
 type LaneHeroProps = {
   title: string;
   kicker: string;
-  recordHrefs: string[];
+  recordHrefs?: string[];
+  imageSrc?: string;
+  imageAlt?: string;
 };
 
-export function LaneHero({ title, kicker, recordHrefs }: LaneHeroProps) {
+export function LaneHero({
+  title,
+  kicker,
+  recordHrefs = [],
+  imageSrc = "/images/release-lane-hero.png",
+  imageAlt = "Compliance Theatre investigation case board"
+}: LaneHeroProps) {
   return (
     <section className="lane-hero">
       <Image
-        src="/images/release-lane-hero.png"
-        alt="Compliance Theatre investigation case board"
+        src={imageSrc}
+        alt={imageAlt}
         fill
         priority
         sizes="100vw"
@@ -20,7 +28,7 @@ export function LaneHero({ title, kicker, recordHrefs }: LaneHeroProps) {
       <div className="lane-hero-copy">
         <p className="eyebrow">{kicker}</p>
         <h1>{title}</h1>
-        <RandomRecordButton hrefs={recordHrefs} />
+        {recordHrefs.length > 0 ? <RandomRecordButton hrefs={recordHrefs} /> : null}
       </div>
     </section>
   );

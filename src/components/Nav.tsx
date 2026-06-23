@@ -4,6 +4,7 @@ import Link from "next/link";
 const links = [
   ["PLSAS", "/plsas"],
   ["Hopkins", "/hopkins"],
+  ["PLPD", "/plpd"],
   ["Form Builder", "/form-builder"]
 ] as const;
 

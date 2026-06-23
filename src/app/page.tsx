@@ -21,6 +21,7 @@ export default function Home() {
         <div className="hero-actions">
           <Link href="/plsas">PLSAS Releases</Link>
           <Link href="/hopkins">Hopkins Releases</Link>
+          <Link href="/plpd">PLPD</Link>
           <Link href="/form-builder">Build A Request</Link>
         </div>
       </section>
