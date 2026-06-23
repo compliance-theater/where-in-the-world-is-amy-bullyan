@@ -31,6 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7
     },
     {
+      url: `${siteUrl}/faq`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8
+    },
+    {
       url: `${siteUrl}/form-builder`,
       lastModified: now,
       changeFrequency: "monthly",

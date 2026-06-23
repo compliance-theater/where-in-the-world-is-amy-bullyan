@@ -276,6 +276,50 @@ button {
   margin: -8px 0 28px;
 }
 
+.start-here {
+  align-items: center;
+  background: rgba(9, 18, 38, 0.58);
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(220px, 0.55fr) 1fr;
+  margin: -6px 0 28px;
+  padding: 20px 0;
+}
+
+.start-here h2 {
+  font-size: 26px;
+  line-height: 1;
+  margin: 6px 0 0;
+}
+
+.start-here-links {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.start-here-links a {
+  background: rgba(43, 217, 255, 0.1);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  min-height: 92px;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.start-here-links span {
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.start-here-links strong {
+  color: var(--gold);
+}
+
 .stat-cell {
   border-right: 1px solid var(--line);
   padding: 18px 20px;
@@ -464,9 +508,25 @@ button {
 }
 
 .builder-choice p,
-.privacy-note {
+.privacy-note,
+.faq-item p {
   color: var(--muted);
   line-height: 1.55;
+}
+
+.faq-list {
+  border-top: 1px solid var(--line);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 28px 0;
+}
+
+.faq-item h2 {
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.05;
+  margin: 0 0 12px;
 }
 
 .privacy-note {
@@ -544,6 +604,7 @@ button:disabled {
   nav,
   .band,
   .stats-band,
+  .start-here,
   .release-row,
   .artifact-card,
   .builder-choice-grid,
@@ -554,6 +615,11 @@ button:disabled {
   .artifact-list.compact {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .start-here-links {
+    grid-template-columns: 1fr;
+    margin-top: 16px;
   }
 
   .site-header {

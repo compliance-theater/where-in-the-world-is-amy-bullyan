@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Gtm } from "@/components/Gtm";
 import { Nav } from "@/components/Nav";
+import { faqs } from "@/lib/faq";
 import { releaseArtifacts } from "@/lib/releaseArtifacts";
 import "./globals.css";
 
@@ -58,12 +59,31 @@ const jsonLd = {
           "@id": `${siteUrl}/#release-library`
         }
       }))
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${siteUrl}/#faq`,
+      isPartOf: {
+        "@id": `${siteUrl}/#website`
+      },
+      mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer
+          }
+        }))
     }
   ]
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  robots: {
+    index: true,
+    follow: true
+  },
   title: {
     default: "Mystery Compliance Theatre 2000",
     template: "%s | Mystery Compliance Theatre 2000"

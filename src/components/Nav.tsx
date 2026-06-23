@@ -5,7 +5,8 @@ const links = [
   ["PLSAS", "/plsas"],
   ["Hopkins", "/hopkins"],
   ["PLPD", "/plpd"],
-  ["Form Builder", "/form-builder"]
+  ["FAQ", "/faq"],
+  ["Build a Request", "/form-builder"]
 ] as const;
 
 export function Nav() {
