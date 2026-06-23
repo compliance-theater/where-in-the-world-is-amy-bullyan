@@ -13,14 +13,14 @@ Then open `http://localhost:3000`.
 
 ## Optional Analytics
 
-Set `NEXT_PUBLIC_GTM_ID` to enable Google Tag Manager:
+Set `NEXT_PUBLIC_GTAG_ID` to enable Google Analytics via `gtag.js`:
 
 ```powershell
-$env:NEXT_PUBLIC_GTM_ID="GTM-XXXXXXX"
+$env:NEXT_PUBLIC_GTAG_ID="G-XXXXXXXXXX"
 npm run dev
 ```
 
-When the variable is absent, no GTM scripts are rendered.
+When the variable is absent, no Google Analytics scripts are rendered.
 
 ## Release Assets
 
