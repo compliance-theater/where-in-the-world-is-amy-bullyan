@@ -172,6 +172,15 @@ nav a {
   margin: 0;
 }
 
+.lane-hero-copy h1 span {
+  display: block;
+}
+
+.lane-hero-copy h1.compact-title {
+  font-size: clamp(38px, 5.6vw, 70px);
+  line-height: 0.98;
+}
+
 .form-hero {
   background: #020510;
   overflow: hidden;

@@ -10,6 +10,8 @@ export default function PlpdPage() {
     <main>
       <LaneHero
         title="Coming Soon..."
+        titleLines={["Coming", "Soon..."]}
+        titleSize="compact"
         kicker="PLPD"
         imageSrc="/images/plpd-hero.png"
         imageAlt="Compliance Theatre processing unit review desk"
