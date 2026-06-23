@@ -308,6 +308,26 @@ button {
   border-top: 1px solid var(--line);
 }
 
+.artifact-list.grouped {
+  border-top: 0;
+}
+
+.artifact-group {
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+}
+
+.artifact-group + .artifact-group {
+  margin-top: 38px;
+}
+
+.artifact-group h2 {
+  color: var(--cyan);
+  font-size: 30px;
+  line-height: 1;
+  margin: 0 0 12px;
+}
+
 .artifact-list.compact {
   display: grid;
   gap: 16px;
