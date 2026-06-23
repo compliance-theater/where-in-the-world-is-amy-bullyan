@@ -11,7 +11,15 @@ export function ArtifactList({ artifacts, compact = false }: ArtifactListProps) 
     return (
       <div className="artifact-list grouped">
         {groups.map((group) => {
-          const groupArtifacts = artifacts.filter((artifact) => artifact.group === group);
+          const groupArtifacts = artifacts
+            .filter((artifact) => artifact.group === group)
+            .sort((a, b) => {
+              if (group !== "Board Emails") {
+                return 0;
+              }
+
+              return a.date.localeCompare(b.date);
+            });
           if (groupArtifacts.length === 0) {
             return null;
           }

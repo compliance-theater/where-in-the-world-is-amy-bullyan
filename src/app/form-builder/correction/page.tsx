@@ -13,8 +13,8 @@ export default function CorrectionBuilderPage() {
         <h1>Challenge records after inappropriate access is identified.</h1>
         <p>
           Use this after you have identified if and who accessed your child's records inappropriately. It generates a
-          branded FERPA/MGDPA correction request asking the district to correct or append the maintained record and
-          preserve the access-basis evidence.
+          FERPA/MGDPA correction request asking the district to correct or append the maintained record and preserve
+          the access-basis evidence.
         </p>
       </div>
       <CorrectionFormBuilder />

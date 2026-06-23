@@ -23,7 +23,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     lane: "PLSAS",
     group: "Packets",
     title: "Administrator of the Year Packet",
-    eyebrow: "Branded release packet",
+    eyebrow: "Release packet",
     date: "2026-06-23",
     pages: 62,
     radioactiveness: "9.6/10",
@@ -229,31 +229,16 @@ export const releaseArtifacts: ReleaseArtifact[] = [
       "communications/evidence/plsas_governance_notices_release_redacted_2026-06-23/2026-06-21-isd719-board-governance-homs-titleix-source-record-coverup-notice_RELEASE_REDACTED.pdf"
   },
   {
-    id: "hmr-request-redacted",
-    lane: "Hopkins",
-    group: "Packets",
-    title: "HMR Request-Only Redacted Packet",
-    eyebrow: "Request packet",
-    date: "2026-06-22",
-    pages: 6,
-    radioactiveness: "9.3/10",
-    description:
-      "A correction request focused on maltreatment routing, policy obligations, and the records Hopkins was warned about.",
-    href: "/release-assets/hopkins/hmr-request-redacted-shareable.pdf",
-    sourcePath:
-      "communications/evidence/hopkins_child_safety_hmr_rr001_redacted_request_2026-06-22/2026-06-04-isd719-homs-maltreatment-policy414-correction_REQUEST_REDACTED_SHAREABLE.pdf"
-  },
-  {
     id: "hmr-combined-redacted",
     lane: "Hopkins",
     group: "Packets",
-    title: "HMR Combined Redacted Packet",
-    eyebrow: "Combined request and exhibits",
+    title: "HOMS Maltreatment Report / Policy 414 Routing Record",
+    eyebrow: "Maltreatment routing packet",
     date: "2026-06-22",
     pages: 46,
-    radioactiveness: "9.0/10",
+    radioactiveness: "9.4/10",
     description:
-      "The correction request plus supporting materials: enough context to make silence look like a choice.",
+      "The packet that asks why a child-safety complaint was treated like paperwork instead of a mandated-reporting alarm bell.",
     href: "/release-assets/hopkins/hmr-combined-redacted-shareable.pdf",
     sourcePath:
       "communications/evidence/hopkins_child_safety_hmr_rr001_redacted_combined_packet_2026-06-22/2026-06-04-isd719-homs-maltreatment-policy414-correction-packet_REDACTED_SHAREABLE.pdf"
@@ -266,9 +251,9 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Board email",
     date: "2026-06-04",
     pages: 1,
-    radioactiveness: "8.5/10",
+    radioactiveness: "8.8/10",
     description:
-      "The email that put Hopkins on notice about maltreatment-routing concerns before the superintendent transition.",
+      "Hopkins was told the incoming superintendent's old district had a live child-safety routing problem. The inbox did not flinch.",
     href: "/release-assets/hopkins/native-send-01-child-safety-maltreatment-routing.pdf",
     sourcePath:
       "communications/evidence/native_renders_release_redacted_2026-06-23/hopkins_send_01_2026-06-04_child-safety-maltreatment-routing_thread_19e9296374ad2d7c_msg_19e92972b36ab466_native_REDACTED.pdf"
@@ -281,9 +266,9 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Board email",
     date: "2026-06-15",
     pages: 1,
-    radioactiveness: "7.8/10",
+    radioactiveness: "8.1/10",
     description:
-      "A final information packet went in. The response, so far, has not exactly strained the inbox.",
+      "A final packet landed before the transition. If anyone at Hopkins had follow-up questions, they kept them impressively private.",
     href: "/release-assets/hopkins/native-send-02-final-information-packet.pdf",
     sourcePath:
       "communications/evidence/native_renders_release_redacted_2026-06-23/hopkins_send_02_2026-06-15_final-information-packet_thread_19ecce5c875830a7_msg_19ecce5c875830a7_native_REDACTED.pdf"
@@ -296,9 +281,9 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Board email",
     date: "2026-05-29",
     pages: 1,
-    radioactiveness: "8.2/10",
+    radioactiveness: "8.4/10",
     description:
-      "Supplemental concerns were sent before the hiring train left the station.",
+      "Supplemental governance warnings went in while there was still time to ask whether this hire came with baggage.",
     href: "/release-assets/hopkins/native-send-03-supplemental-governance-notice.pdf",
     sourcePath:
       "communications/evidence/native_renders_release_redacted_2026-06-23/hopkins_send_03_2026-05-29_supplemental-governance-notice_thread_19e72314f657abfc_msg_19e7236b2820bb33_native_REDACTED.pdf"
@@ -311,9 +296,9 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Board email",
     date: "2026-05-12",
     pages: 3,
-    radioactiveness: "8.0/10",
+    radioactiveness: "8.3/10",
     description:
-      "A May 12 notice establishing that Hopkins had more than a month to ask obvious follow-up questions.",
+      "The May 12 notice: more than a month of runway for obvious questions before the black-hole routine became its own exhibit.",
     href: "/release-assets/hopkins/native-send-04-formal-investigations-notice.pdf",
     sourcePath:
       "communications/evidence/native_renders_release_redacted_2026-06-23/hopkins_send_04_2026-05-12_formal-investigations-notice_thread_19e1ada6a6aa9425_msgs_19e1ae41f76142cd_19e1ae5fe3883fb5_native_REDACTED.pdf"
@@ -326,6 +311,6 @@ export function artifactsForLane(lane: DistrictLane) {
 
 export const featuredArtifacts = [
   releaseArtifacts.find((artifact) => artifact.id === "administrator-packet"),
-  releaseArtifacts.find((artifact) => artifact.id === "hmr-request-redacted"),
+  releaseArtifacts.find((artifact) => artifact.id === "hmr-combined-redacted"),
   releaseArtifacts.find((artifact) => artifact.id === "governance-ferpa-mapping-scope")
 ].filter(Boolean) as ReleaseArtifact[];

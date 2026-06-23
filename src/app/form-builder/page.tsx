@@ -33,12 +33,12 @@ export default function FormBuilderPage() {
           <Link className="builder-choice" href="/form-builder/request">
             <span className="eyebrow">Request</span>
             <h2>Who saw my child's records?</h2>
-            <p>Generate a branded FERPA/MGDPA request asking the district to identify access, disclosure logs, record categories, roles, and the claimed FERPA basis for people who saw your child's records.</p>
+            <p>Generate a FERPA/MGDPA request asking the district to identify access, disclosure logs, record categories, roles, and the claimed FERPA basis for people who saw your child's records.</p>
           </Link>
           <Link className="builder-choice" href="/form-builder/correction">
             <span className="eyebrow">Correction</span>
             <h2>This person should not have seen this.</h2>
-            <p>Generate a branded correction request after access has been identified, with optional cure language for victim acknowledgement.</p>
+            <p>Generate a correction request after access has been identified, with optional cure language for victim acknowledgement.</p>
           </Link>
         </div>
       </section>
