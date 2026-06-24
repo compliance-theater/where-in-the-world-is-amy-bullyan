@@ -3,10 +3,11 @@ import type { ReleaseArtifact } from "@/lib/releaseArtifacts";
 type ArtifactListProps = {
   artifacts: ReleaseArtifact[];
   compact?: boolean;
+  grouped?: boolean;
 };
 
-export function ArtifactList({ artifacts, compact = false }: ArtifactListProps) {
-  if (!compact) {
+export function ArtifactList({ artifacts, compact = false, grouped = true }: ArtifactListProps) {
+  if (!compact && grouped) {
     const groups = ["Packets", "Board Emails", "Governance Notices"] as const;
     return (
       <div className="artifact-list grouped">
@@ -38,7 +39,7 @@ export function ArtifactList({ artifacts, compact = false }: ArtifactListProps) 
   }
 
   return (
-    <div className="artifact-list compact">
+    <div className={`artifact-list ${compact ? "compact" : "ordered"}`}>
       {artifacts.map((artifact) => (
         <ArtifactCard artifact={artifact} key={artifact.id} />
       ))}

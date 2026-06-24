@@ -157,8 +157,8 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     id: "governance-catastrophic-record-integrity",
     lane: "PLSAS",
     group: "Governance Notices",
-    title: "Governance Notice: Catastrophic Record Integrity Failure",
-    eyebrow: "Selected governance notice",
+    title: "Attached Packet: Catastrophic Record Integrity Failure",
+    eyebrow: "Attached packet",
     date: "2026-06-17",
     pages: 3,
     radioactiveness: "9.4/10",
@@ -172,8 +172,8 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     id: "governance-ferpa-mapping-scope",
     lane: "PLSAS",
     group: "Governance Notices",
-    title: "Governance Notice: FERPA Mapping Scope",
-    eyebrow: "Selected governance notice",
+    title: "Attached Packet: FERPA Mapping Scope",
+    eyebrow: "Attached packet",
     date: "2026-06-18",
     pages: 4,
     radioactiveness: "8.8/10",
@@ -187,8 +187,8 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     id: "governance-contractor-counsel",
     lane: "PLSAS",
     group: "Governance Notices",
-    title: "Governance Notice: Contractor/Counsel Disclosure-Log Reliance",
-    eyebrow: "Selected governance notice",
+    title: "Attached Packet: Contractor/Counsel Disclosure-Log Reliance",
+    eyebrow: "Attached packet",
     date: "2026-06-20",
     pages: 5,
     radioactiveness: "8.9/10",
@@ -202,8 +202,8 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     id: "governance-robert-cothern",
     lane: "PLSAS",
     group: "Governance Notices",
-    title: "Governance Notice: Robert Cothern",
-    eyebrow: "Selected governance notice",
+    title: "Attached Packet: Robert Cothern Governance Notice",
+    eyebrow: "Attached packet",
     date: "2026-06-20",
     pages: 5,
     radioactiveness: "8.3/10",
@@ -217,8 +217,8 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     id: "governance-homs-titleix-collapse",
     lane: "PLSAS",
     group: "Governance Notices",
-    title: "Governance Notice: HOMS / Title IX Source-Record Failure",
-    eyebrow: "Selected governance notice",
+    title: "Attached Packet: HOMS / Title IX Source-Record Failure",
+    eyebrow: "Attached packet",
     date: "2026-06-21",
     pages: 10,
     radioactiveness: "9.5/10",
@@ -227,6 +227,51 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     href: "/release-assets/plsas/governance-homs-titleix-source-record.pdf",
     sourcePath:
       "communications/evidence/plsas_governance_notices_release_redacted_2026-06-23/2026-06-21-isd719-board-governance-homs-titleix-source-record-coverup-notice_RELEASE_REDACTED.pdf"
+  },
+  {
+    id: "daily-status-tracker-combined-2026-06-23",
+    lane: "PLSAS",
+    group: "Packets",
+    title: "Current Pending PLSAS Request List",
+    eyebrow: "Attached packet",
+    date: "2026-06-23",
+    pages: 31,
+    radioactiveness: "8.7/10",
+    description:
+      "Our current pending PLSAS request list. Each row is either a correction request or a small, scoped records request, and for most rows the expected answer may simply be a request-specific no-records response.",
+    href: "/release-assets/plsas/daily-status-tracker-2026-06-23-postable-redacted.pdf",
+    sourcePath:
+      "communications/request/postable/2026-06-23-isd719-daily-status-tracker-board-governance_postable-redacted.pdf"
+  },
+  {
+    id: "pending-request-compendium-2026-06-23",
+    lane: "PLSAS",
+    group: "Packets",
+    title: "Attached Packet: Pending Request Compendium",
+    eyebrow: "Attached packet",
+    date: "2026-06-23",
+    pages: 18,
+    radioactiveness: "8.5/10",
+    description:
+      "The pending/timing half of the status tracker, redacted for child PII and sensitive assault-context references.",
+    href: "/release-assets/plsas/pending-request-compendium-2026-06-23-postable-redacted.pdf",
+    sourcePath:
+      "communications/request/postable/pending_record_request_helpful_compendium_2026-06-23_postable-redacted.pdf"
+  },
+  {
+    id: "active-elapsed-status-guide-2026-06-23",
+    lane: "PLSAS",
+    group: "Packets",
+    title: "Attached Packet: Active / Elapsed Status Guide",
+    eyebrow: "Attached packet",
+    date: "2026-06-23",
+    pages: 13,
+    radioactiveness: "8.6/10",
+    description:
+      "The active elapsed-status guide from the June 23 tracker, using red-box PDF redactions for postable release.",
+    href: "/release-assets/plsas/active-elapsed-status-guide-2026-06-23-postable-redacted.pdf",
+    sourcePath:
+      "communications/request/postable/active_mgdpa_violations_helpful_guide_2026-06-23_postable-redacted.pdf"
   },
   {
     id: "hmr-combined-redacted",
