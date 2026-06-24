@@ -9,8 +9,8 @@ export default function PlpdPage() {
   return (
     <main>
       <LaneHero
-        title="Coming Soon..."
-        titleLines={["Coming", "Soon..."]}
+        title="PLPD"
+        titleLines={["PLPD"]}
         titleSize="compact"
         kicker="PLPD"
         imageSrc="/images/plpd-hero.png"
@@ -18,9 +18,13 @@ export default function PlpdPage() {
       />
       <section className="page-shell lane-body">
         <div className="page-heading lane-summary">
+          <h2>Status: Scope clarification pending</h2>
           <p>
-            We have reported PLSAS&apos;s failure to comply with mandated reporting laws to the Prior Lake Police
-            Department and are awaiting confirmation on the results of their investigation.
+            On June 17-18, 2026, PLPD stated that it would not conduct a criminal investigation into possible
+            mandated-reporter failure because two underlying incidents had been reported to PLPD through proper channels.
+            The family has asked PLPD to clarify whether its review addressed only the underlying student incidents or
+            also the separate adult failure-to-report and reporting-interference allegations. That clarification remains
+            pending.
           </p>
         </div>
       </section>
