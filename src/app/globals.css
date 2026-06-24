@@ -183,13 +183,55 @@ nav a {
 
 .form-hero {
   background: #020510;
+  display: flex;
+  min-height: clamp(360px, 52vw, 620px);
   overflow: hidden;
+  position: relative;
+  align-items: flex-end;
 }
 
-.form-hero img {
-  display: block;
-  height: auto;
+.form-hero::after {
+  background:
+    linear-gradient(180deg, rgba(2, 5, 16, 0) 34%, rgba(2, 5, 16, 0.44) 61%, rgba(2, 5, 16, 0.88) 100%),
+    linear-gradient(90deg, rgba(2, 5, 16, 0.78) 0%, rgba(2, 5, 16, 0.2) 34%, rgba(2, 5, 16, 0.34) 100%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.form-hero-image {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.form-hero-title {
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(44px, 8vw, 118px);
+  font-weight: 900;
+  line-height: 0.86;
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 0 28px clamp(28px, 5vw, 72px);
+  position: relative;
+  text-shadow: 0 4px 24px rgba(2, 5, 16, 0.88), 0 1px 0 rgba(255, 255, 255, 0.18);
   width: 100%;
+  z-index: 2;
+}
+
+.form-hero-title span {
+  display: block;
+}
+
+.form-hero-title span:first-child {
+  color: var(--pink);
+}
+
+.form-hero-title span:last-child {
+  color: #fff1d6;
+  font-size: 0.78em;
 }
 
 .random-record-button {
@@ -660,6 +702,19 @@ button:disabled {
 
   .lane-hero-copy {
     max-width: calc(100% - 48px);
+  }
+
+  .form-hero {
+    min-height: 330px;
+  }
+
+  .form-hero-image {
+    object-position: center top;
+  }
+
+  .form-hero-title {
+    font-size: clamp(40px, 14vw, 62px);
+    padding: 0 22px 24px;
   }
 
   .release-actions {

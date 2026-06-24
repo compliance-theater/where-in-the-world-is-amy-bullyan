@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { FormHero } from "@/components/FormHero";
 import { faqs } from "@/lib/faq";
 
 export const metadata: Metadata = {
@@ -11,16 +11,7 @@ export const metadata: Metadata = {
 export default function FaqPage() {
   return (
     <main>
-      <section className="form-hero" aria-label="FAQ">
-        <Image
-          src="/images/form-builder-hero.png"
-          alt="Dismantle Systems of Oppression"
-          width={2078}
-          height={1088}
-          priority
-          sizes="100vw"
-        />
-      </section>
+      <FormHero label="FAQ" />
       <section className="page-shell faq-shell">
         <div className="page-heading">
           <p className="eyebrow">FAQ</p>

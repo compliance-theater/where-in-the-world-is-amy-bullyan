@@ -89,6 +89,10 @@ export const metadata: Metadata = {
     template: "%s | Mystery Compliance Theatre 2000"
   },
   description,
+  icons: {
+    icon: "/assets/nav-mark.png",
+    apple: "/assets/nav-mark.png"
+  },
   openGraph: {
     title: "Mystery Compliance Theatre 2000",
     description,

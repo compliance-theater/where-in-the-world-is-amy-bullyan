@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import { FormHero } from "@/components/FormHero";
 
 export const metadata: Metadata = {
   title: "Build a Request",
@@ -11,16 +11,7 @@ export const metadata: Metadata = {
 export default function FormBuilderPage() {
   return (
     <main>
-      <section className="form-hero" aria-label="Form Builder">
-        <Image
-          src="/images/form-builder-hero.png"
-          alt="Dismantle Systems of Oppression"
-          width={2078}
-          height={1088}
-          priority
-          sizes="100vw"
-        />
-      </section>
+      <FormHero label="Form Builder" />
       <section className="page-shell builder-shell">
         <div className="page-heading">
           <p className="eyebrow">Form Builder</p>
