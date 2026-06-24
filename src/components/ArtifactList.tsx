@@ -65,7 +65,7 @@ function ArtifactCard({ artifact }: { artifact: ReleaseArtifact }) {
           </div>
           <div>
             <dt>Smell</dt>
-            <dd>{artifact.radioactiveness}</dd>
+            <dd>{artifact.smell}</dd>
           </div>
         </dl>
       </div>

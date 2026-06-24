@@ -5,15 +5,15 @@ function shortDate(value: string) {
   return `${month}/${day}/${String(year).slice(2)}`;
 }
 
-function radioScore(value: string) {
+function smellScore(value: string) {
   return Number.parseFloat(value.replace("/10", ""));
 }
 
 export function ReleaseStats({ artifacts }: { artifacts: ReleaseArtifact[] }) {
   const dates = artifacts.map((artifact) => artifact.date).sort();
   const pageTotal = artifacts.reduce((sum, artifact) => sum + artifact.pages, 0);
-  const averageRadioactiveness =
-    artifacts.reduce((sum, artifact) => sum + radioScore(artifact.radioactiveness), 0) / Math.max(artifacts.length, 1);
+  const averageSmell =
+    artifacts.reduce((sum, artifact) => sum + smellScore(artifact.smell), 0) / Math.max(artifacts.length, 1);
   const dateRange = dates.length ? `${shortDate(dates[0])} - ${shortDate(dates[dates.length - 1])}` : "No packets";
 
   return (
@@ -28,7 +28,7 @@ export function ReleaseStats({ artifacts }: { artifacts: ReleaseArtifact[] }) {
       </div>
       <div className="stat-cell">
         <span>Average smell</span>
-        <strong>{averageRadioactiveness.toFixed(1)}/10</strong>
+        <strong>{averageSmell.toFixed(1)}/10</strong>
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ export type ReleaseArtifact = {
   eyebrow: string;
   date: string;
   pages: number;
-  radioactiveness: string;
+  smell: string;
   description: string;
   href: string;
   sourcePath: string;
@@ -26,7 +26,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Release packet",
     date: "2026-06-23",
     pages: 62,
-    radioactiveness: "9.6/10",
+    smell: "9.6/10",
     description:
       "Training, correction, and response records showing how basic Title IX and maltreatment obligations got treated as optional paperwork.",
     href: "/release-assets/plsas/administrator-of-the-year.pdf",
@@ -41,7 +41,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Board email",
     date: "2026-06-21",
     pages: 1,
-    radioactiveness: "9.2/10",
+    smell: "9.2/10",
     description:
       "A warning that the investigation record universe was collapsing under its own contradictions, paired with board receipt proof.",
     href: "/release-assets/plsas/plsas-autoack-thread-01-homs-titleix-process-collapse.pdf",
@@ -56,7 +56,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Board email",
     date: "2026-06-17",
     pages: 1,
-    radioactiveness: "9.3/10",
+    smell: "9.3/10",
     description:
       "The board was told the maintained records could not all be true at once, and the receipt trail says the message arrived.",
     href: "/release-assets/plsas/plsas-autoack-thread-02-catastrophic-record-integrity.pdf",
@@ -71,7 +71,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Board email",
     date: "2026-06-18",
     pages: 1,
-    radioactiveness: "8.9/10",
+    smell: "8.9/10",
     description:
       "A simple question with ugly implications: who accessed student records, under what posted category, and where is the basis?",
     href: "/release-assets/plsas/plsas-autoack-thread-03-ferpa-mapping-definitions.pdf",
@@ -86,7 +86,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Board email",
     date: "2026-06-20",
     pages: 1,
-    radioactiveness: "8.8/10",
+    smell: "8.8/10",
     description:
       "Contractor, counsel, FERPA, and disclosure-log reliance all collide in one tidy little governance headache.",
     href: "/release-assets/plsas/plsas-autoack-thread-04-contractor-counsel-reliance.pdf",
@@ -101,7 +101,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Board email",
     date: "2026-06-20",
     pages: 1,
-    radioactiveness: "8.4/10",
+    smell: "8.4/10",
     description:
       "A June 11 records response becomes a board-level problem once the district is held to the universe it represented.",
     href: "/release-assets/plsas/plsas-autoack-thread-05-june11-data-practices-response.pdf",
@@ -116,7 +116,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Clarification record",
     date: "2026-06-23",
     pages: 4,
-    radioactiveness: "7.6/10",
+    smell: "7.6/10",
     description:
       "A cure path was offered. The paper trail is quieter than one would hope after that.",
     href: "/release-assets/plsas/good-faith-cure-thread-release-redacted.pdf",
@@ -131,7 +131,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Emily bundle",
     date: "2026-06-23",
     pages: 9,
-    radioactiveness: "9.1/10",
+    smell: "9.1/10",
     description:
       "The record is accurate, everything responsive has been provided, the complaint is dismissed. Nothing to see here, apparently.",
     href: "/release-assets/plsas/nothing-to-see-here.pdf",
@@ -146,7 +146,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Primary investigation records",
     date: "2026-06-22",
     pages: 6,
-    radioactiveness: "9.0/10",
+    smell: "9.0/10",
     description:
       "The underlying investigation reports, with private family data removed and the district's own redactions left exactly where they were.",
     href: "/release-assets/plsas/homs-investigation-reports-redacted-shareable-packet.pdf",
@@ -161,7 +161,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Attached packet",
     date: "2026-06-17",
     pages: 3,
-    radioactiveness: "9.4/10",
+    smell: "9.4/10",
     description:
       "The board was put on notice that the district's represented record universe appears to contain mutually incompatible facts.",
     href: "/release-assets/plsas/governance-catastrophic-record-integrity.pdf",
@@ -176,7 +176,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Attached packet",
     date: "2026-06-18",
     pages: 4,
-    radioactiveness: "8.8/10",
+    smell: "8.8/10",
     description:
       "A notice asking the district to identify the actual FERPA/MGDPA category mapping it relied on before records kept moving.",
     href: "/release-assets/plsas/governance-ferpa-mapping-scope.pdf",
@@ -191,7 +191,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Attached packet",
     date: "2026-06-20",
     pages: 5,
-    radioactiveness: "8.9/10",
+    smell: "8.9/10",
     description:
       "A disclosure-log and access-basis problem dressed up as routine contractor/counsel handling.",
     href: "/release-assets/plsas/governance-contractor-counsel-reliance.pdf",
@@ -206,7 +206,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Attached packet",
     date: "2026-06-20",
     pages: 5,
-    radioactiveness: "8.3/10",
+    smell: "8.3/10",
     description:
       "A response-role accountability notice for the part where the district's data-practices posture needed adult supervision.",
     href: "/release-assets/plsas/governance-robert-cothern.pdf",
@@ -221,7 +221,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Attached packet",
     date: "2026-06-21",
     pages: 10,
-    radioactiveness: "9.5/10",
+    smell: "9.5/10",
     description:
       "Source records, finality claims, and Title IX posture all meet in the same dark hallway.",
     href: "/release-assets/plsas/governance-homs-titleix-source-record.pdf",
@@ -236,7 +236,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Attached packet",
     date: "2026-06-23",
     pages: 31,
-    radioactiveness: "8.7/10",
+    smell: "8.7/10",
     description:
       "Our current pending PLSAS request list. Each row is either a correction request or a small, scoped records request, and for most rows the expected answer may simply be a request-specific no-records response.",
     href: "/release-assets/plsas/daily-status-tracker-2026-06-23-postable-redacted.pdf",
@@ -251,7 +251,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Attached packet",
     date: "2026-06-23",
     pages: 18,
-    radioactiveness: "8.5/10",
+    smell: "8.5/10",
     description:
       "The pending/timing half of the status tracker, redacted for child PII and sensitive assault-context references.",
     href: "/release-assets/plsas/pending-request-compendium-2026-06-23-postable-redacted.pdf",
@@ -266,7 +266,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Attached packet",
     date: "2026-06-23",
     pages: 13,
-    radioactiveness: "8.6/10",
+    smell: "8.6/10",
     description:
       "The active elapsed-status guide from the June 23 tracker, using red-box PDF redactions for postable release.",
     href: "/release-assets/plsas/active-elapsed-status-guide-2026-06-23-postable-redacted.pdf",
@@ -281,7 +281,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Maltreatment routing packet",
     date: "2026-06-22",
     pages: 46,
-    radioactiveness: "9.4/10",
+    smell: "9.4/10",
     description:
       "The packet that asks why a child-safety complaint was treated like paperwork instead of a mandated-reporting alarm bell.",
     href: "/release-assets/hopkins/hmr-combined-redacted-shareable.pdf",
@@ -296,7 +296,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Board email",
     date: "2026-06-04",
     pages: 1,
-    radioactiveness: "8.8/10",
+    smell: "8.8/10",
     description:
       "Hopkins was told the incoming superintendent's old district had a live child-safety routing problem. The inbox did not flinch.",
     href: "/release-assets/hopkins/native-send-01-child-safety-maltreatment-routing.pdf",
@@ -311,7 +311,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Board email",
     date: "2026-06-15",
     pages: 1,
-    radioactiveness: "8.1/10",
+    smell: "8.1/10",
     description:
       "A final packet landed before the transition. If anyone at Hopkins had follow-up questions, they kept them impressively private.",
     href: "/release-assets/hopkins/native-send-02-final-information-packet.pdf",
@@ -326,7 +326,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Board email",
     date: "2026-05-29",
     pages: 1,
-    radioactiveness: "8.4/10",
+    smell: "8.4/10",
     description:
       "Supplemental governance warnings went in while there was still time to ask whether this hire came with baggage.",
     href: "/release-assets/hopkins/native-send-03-supplemental-governance-notice.pdf",
@@ -341,7 +341,7 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     eyebrow: "Board email",
     date: "2026-05-12",
     pages: 3,
-    radioactiveness: "8.3/10",
+    smell: "8.3/10",
     description:
       "The May 12 notice: more than a month of runway for obvious questions before the black-hole routine became its own exhibit.",
     href: "/release-assets/hopkins/native-send-04-formal-investigations-notice.pdf",

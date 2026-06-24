@@ -24,7 +24,7 @@ export function StartHere({ artifacts, ids }: StartHereProps) {
         {featured.map((artifact) => (
           <a href={artifact.href} key={artifact.id} target="_blank" rel="noreferrer">
             <span>{artifact.title}</span>
-            <strong>{artifact.radioactiveness}</strong>
+            <strong>{artifact.smell}</strong>
           </a>
         ))}
       </div>
