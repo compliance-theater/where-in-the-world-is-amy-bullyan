@@ -27,7 +27,7 @@ export function ReleaseStats({ artifacts }: { artifacts: ReleaseArtifact[] }) {
         <strong>{pageTotal}</strong>
       </div>
       <div className="stat-cell">
-        <span>Average radioactiveness</span>
+        <span>Average smell</span>
         <strong>{averageRadioactiveness.toFixed(1)}/10</strong>
       </div>
     </section>
