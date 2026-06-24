@@ -15,7 +15,7 @@ export function LaneHero({
   title,
   kicker,
   recordHrefs = [],
-  imageSrc = "/images/release-lane-hero.png",
+  imageSrc = "/images/release-lane-hero.jpg",
   imageAlt = "Compliance Theatre investigation case board",
   titleLines,
   titleSize = "default"

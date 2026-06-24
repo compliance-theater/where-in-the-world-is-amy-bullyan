@@ -1,9 +1,12 @@
-import type { Metadata } from "next";
 import { LaneHero } from "@/components/LaneHero";
+import { heroImages, pageMetadata } from "@/lib/pageMetadata";
 
-export const metadata: Metadata = {
-  title: "PLPD"
-};
+export const metadata = pageMetadata({
+  title: "PLPD",
+  description:
+    "PLPD status update on the pending scope clarification for mandated-reporter review.",
+  image: heroImages.plpd
+});
 
 export default function PlpdPage() {
   return (
@@ -13,7 +16,7 @@ export default function PlpdPage() {
         titleLines={["PLPD"]}
         titleSize="compact"
         kicker="PLPD"
-        imageSrc="/images/plpd-hero.png"
+        imageSrc="/images/plpd-hero.jpg"
         imageAlt="Compliance Theatre processing unit review desk"
       />
       <section className="page-shell lane-body">

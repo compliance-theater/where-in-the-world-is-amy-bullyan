@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import { FormHero } from "@/components/FormHero";
 import { faqs } from "@/lib/faq";
+import { heroImages, pageMetadata } from "@/lib/pageMetadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "FAQ",
   description:
-    "Answers about FERPA definitions, red boxes, public records, and why board email receipt proofs matter."
-};
+    "Answers about FERPA definitions, red boxes, public records, and why board email receipt proofs matter.",
+  image: heroImages.formBuilder
+});
 
 export default function FaqPage() {
   return (

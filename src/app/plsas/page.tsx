@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import { ArtifactList } from "@/components/ArtifactList";
 import { LaneHero } from "@/components/LaneHero";
 import { ReleaseStats } from "@/components/ReleaseStats";
 import { StartHere } from "@/components/StartHere";
+import { heroImages, pageMetadata } from "@/lib/pageMetadata";
 import { artifactsForLane } from "@/lib/releaseArtifacts";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "PLSAS Releases",
   description:
-    "PLSAS board emails, investigation records, and governance notices on maltreatment reporting, Title IX posture, and student-record access."
-};
+    "PLSAS board emails, investigation records, and governance notices on maltreatment reporting, Title IX posture, and student-record access.",
+  image: heroImages.releaseLane
+});
 
 const orderedPlsasIds = [
   "plsas-full-autoack-01",

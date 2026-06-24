@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import { ArtifactList } from "@/components/ArtifactList";
 import { LaneHero } from "@/components/LaneHero";
 import { ReleaseStats } from "@/components/ReleaseStats";
 import { StartHere } from "@/components/StartHere";
+import { heroImages, pageMetadata } from "@/lib/pageMetadata";
 import { artifactsForLane } from "@/lib/releaseArtifacts";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Hopkins Releases",
   description:
-    "Hopkins board emails and maltreatment-routing records sent before the superintendent transition, with no substantive response shown."
-};
+    "Hopkins board emails and maltreatment-routing records sent before the superintendent transition, with no substantive response shown.",
+  image: heroImages.releaseLane
+});
 
 export default function HopkinsPage() {
   const artifacts = artifactsForLane("Hopkins");

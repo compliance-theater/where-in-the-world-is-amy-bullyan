@@ -8,10 +8,10 @@ export default function Home() {
     <main>
       <section className="hero">
         <Image
-          src="/images/hero-amy-bullyan.png"
+          src="/images/hero-amy-bullyan.jpg"
           alt="Mystery Compliance Theatre 2000 case board"
-          width={1792}
-          height={1024}
+          width={1774}
+          height={887}
           priority
           sizes="100vw"
           className="hero-image"

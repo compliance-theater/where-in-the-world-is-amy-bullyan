@@ -1,9 +1,12 @@
-import type { Metadata } from "next";
 import { CorrectionFormBuilder } from "@/components/FormBuilder";
+import { heroImages, pageMetadata } from "@/lib/pageMetadata";
 
-export const metadata: Metadata = {
-  title: "Correction Builder"
-};
+export const metadata = pageMetadata({
+  title: "Correction Builder",
+  description:
+    "Generate a FERPA/MGDPA correction request after access has been identified, with optional cure language for victim acknowledgement.",
+  image: heroImages.formBuilder
+});
 
 export default function CorrectionBuilderPage() {
   return (

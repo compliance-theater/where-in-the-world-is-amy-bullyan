@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { FormHero } from "@/components/FormHero";
+import { heroImages, pageMetadata } from "@/lib/pageMetadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Build a Request",
   description:
-    "Generate FERPA/MGDPA request and correction PDFs for identifying who accessed student records and challenging improper access."
-};
+    "Generate FERPA/MGDPA request and correction PDFs for identifying who accessed student records and challenging improper access.",
+  image: heroImages.formBuilder
+});
 
 export default function FormBuilderPage() {
   return (

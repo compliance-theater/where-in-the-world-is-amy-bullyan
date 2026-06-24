@@ -1,9 +1,12 @@
-import type { Metadata } from "next";
 import { RequestFormBuilder } from "@/components/FormBuilder";
+import { heroImages, pageMetadata } from "@/lib/pageMetadata";
 
-export const metadata: Metadata = {
-  title: "Request Builder"
-};
+export const metadata = pageMetadata({
+  title: "Request Builder",
+  description:
+    "Generate a FERPA/MGDPA access-basis request for disclosure logs, access records, record categories, roles, and claimed FERPA basis.",
+  image: heroImages.formBuilder
+});
 
 export default function RequestBuilderPage() {
   return (

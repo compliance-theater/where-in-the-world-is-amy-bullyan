@@ -100,9 +100,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/hero-amy-bullyan.png",
-        width: 1792,
-        height: 1024,
+        url: "/images/hero-amy-bullyan.jpg",
+        width: 1774,
+        height: 887,
         alt: "Where in the world is Amy Bullyan?"
       }
     ]
@@ -111,7 +111,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mystery Compliance Theatre 2000",
     description,
-    images: ["/images/hero-amy-bullyan.png"]
+    images: ["/images/hero-amy-bullyan.jpg"]
   }
 };
 
