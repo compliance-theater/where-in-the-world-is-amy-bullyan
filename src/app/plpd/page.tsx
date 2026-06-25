@@ -27,6 +27,11 @@ const receipts = [
     label: "See the requests",
     href: "/release-assets/plpd/plpd-data-requests-tightly-redacted-2026-06-25.pdf",
     status: "Linked"
+  },
+  {
+    label: "Read the PLPD scope-correction request",
+    href: "/release-assets/plpd/plpd-scope-correction-public-redacted-2026-06-25.pdf",
+    status: "Linked"
   }
 ];
 
@@ -239,6 +244,12 @@ export default function PlpdPage() {
               <li>Records have also been requested concerning police-to-MDE routing.</li>
               <li>Records are pending concerning the late Officer Baker / Scott Peterson supplemental-report contact.</li>
               <li>MDE has been asked to confirm whether it ever received an earlier maltreatment report concerning these events.</li>
+              <li>
+                A correction request asks PLPD to correct its misleading and inaccurate scope record: PLPD claimed it
+                completed investigative work on a matter that includes failure to notify the parent, while PLPD Records
+                simultaneously required proof of parentage as though it did not know the reporting parent was the
+                child's parent.
+              </li>
               <li>The unresolved criminal issues are being preserved for independent county-attorney review.</li>
             </ul>
           </section>
