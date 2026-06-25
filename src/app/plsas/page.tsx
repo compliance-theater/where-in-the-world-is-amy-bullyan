@@ -26,8 +26,8 @@ const orderedPlsasIds = [
   "good-faith-cure-thread",
   "pending-request-compendium-2026-06-23",
   "active-elapsed-status-guide-2026-06-23",
-  "administrator-packet",
   "homs-investigation-reports-redacted-packet",
+  "administrator-packet",
   "nothing-to-see-here",
   "daily-status-tracker-combined-2026-06-23"
 ];
@@ -62,9 +62,9 @@ export default function PlsasPage() {
         <StartHere
           artifacts={artifacts}
           ids={[
+            "homs-investigation-reports-redacted-packet",
             "administrator-packet",
-            "daily-status-tracker-combined-2026-06-23",
-            "homs-investigation-reports-redacted-packet"
+            "daily-status-tracker-combined-2026-06-23"
           ]}
         />
         <ReleaseStats artifacts={artifacts} />
