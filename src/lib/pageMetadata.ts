@@ -37,6 +37,12 @@ export const heroImages = {
     width: 1734,
     height: 907,
     alt: "Three illustrated kittens in a colorful accountability poster style"
+  },
+  faq: {
+    url: "/images/faq-detective-compliance-animals-hero.jpg",
+    width: 1672,
+    height: 941,
+    alt: "Detective answering questions from adorable compliance animals in a cozy investigation office"
   }
 } satisfies Record<string, HeroImage>;
 
@@ -47,6 +53,7 @@ export function pageMetadata({ title, description, image }: PageMetadataInput): 
     openGraph: {
       title,
       description,
+      siteName: "Mystery Compliance Theatre 2000",
       images: [image]
     },
     twitter: {

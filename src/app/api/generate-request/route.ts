@@ -17,15 +17,17 @@ export async function POST(request: NextRequest) {
     deliveryEmail: body.deliveryEmail || "",
     accessorName: body.accessorName || "",
     accessorRole: body.accessorRole || "",
-    victimAcknowledgement: Boolean(body.victimAcknowledgement)
+    victimAcknowledgement: Boolean(body.victimAcknowledgement),
+    excludeGraphics: Boolean(body.excludeGraphics)
   };
   const isCorrection = payload.requestType === "correction";
   const pdf = isCorrection ? await buildCorrectionRequestPdf(payload) : await buildCategoryMappingRequestPdf(payload);
+  const graphicSuffix = payload.excludeGraphics ? "-no-graphics" : "";
   return new Response(pdf, {
     headers: {
       "Content-Type": "application/pdf",
-      "Content-Disposition": `attachment; filename="${isCorrection ? "ferpa-record-correction-request.pdf" : "ferpa-category-mapping-request.pdf"}"`,
-      "X-Request-Builder-Format": "compliance-theater-cover-body"
+      "Content-Disposition": `attachment; filename="${isCorrection ? `ferpa-record-correction-request${graphicSuffix}.pdf` : `ferpa-category-mapping-request${graphicSuffix}.pdf`}"`,
+      "X-Request-Builder-Format": payload.excludeGraphics ? "plain-body" : "compliance-theater-cover-body"
     }
   });
 }

@@ -16,6 +16,7 @@ type FormState = {
   accessorName: string;
   accessorRole: string;
   victimAcknowledgement: boolean;
+  excludeGraphics: boolean;
 };
 
 const requestInitialState: FormState = {
@@ -30,7 +31,8 @@ const requestInitialState: FormState = {
   deliveryEmail: "",
   accessorName: "",
   accessorRole: "",
-  victimAcknowledgement: false
+  victimAcknowledgement: false,
+  excludeGraphics: false
 };
 
 const correctionInitialState: FormState = {
@@ -45,7 +47,8 @@ const correctionInitialState: FormState = {
   deliveryEmail: "",
   accessorName: "",
   accessorRole: "",
-  victimAcknowledgement: false
+  victimAcknowledgement: false,
+  excludeGraphics: false
 };
 
 type BuilderProps = {
@@ -78,7 +81,11 @@ function BuilderForm({ mode }: BuilderProps) {
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = mode === "mapping" ? "ferpa-category-mapping-request.pdf" : "ferpa-record-correction-request.pdf";
+      const graphicSuffix = form.excludeGraphics ? "-no-graphics" : "";
+      link.download =
+        mode === "mapping"
+          ? `ferpa-category-mapping-request${graphicSuffix}.pdf`
+          : `ferpa-record-correction-request${graphicSuffix}.pdf`;
       link.click();
       URL.revokeObjectURL(url);
     } catch (err) {
@@ -149,6 +156,17 @@ function BuilderForm({ mode }: BuilderProps) {
           </label>
         </>
       ) : null}
+      <label className="check-row">
+        <input
+          type="checkbox"
+          checked={form.excludeGraphics}
+          onChange={(e) => update("excludeGraphics", e.target.checked)}
+        />
+        <span>
+          Exclude graphics. Generate a plain body-only PDF without the cover art or logo. The request text stays the
+          same; it just loses the pretty wrapping paper.
+        </span>
+      </label>
       <button type="submit" disabled={busy}>
         {busy ? "Generating..." : mode === "mapping" ? "Generate FERPA Mapping Request PDF" : "Generate FERPA Correction Request PDF"}
       </button>

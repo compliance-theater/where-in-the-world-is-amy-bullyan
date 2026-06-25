@@ -142,16 +142,16 @@ export const releaseArtifacts: ReleaseArtifact[] = [
     id: "homs-investigation-reports-redacted-packet",
     lane: "PLSAS",
     group: "Packets",
-    title: "HOMS Investigation Reports Redacted Packet",
-    eyebrow: "Primary investigation records",
-    date: "2026-06-22",
-    pages: 6,
-    smell: "9.0/10",
+    title: "HOMS Investigation Reports Gross-Bubble Packet",
+    eyebrow: "Annotated investigation records",
+    date: "2026-06-25",
+    pages: 9,
+    smell: "9.7/10",
     description:
-      "The underlying investigation reports, with private family data removed and the district's own redactions left exactly where they were.",
-    href: "/release-assets/plsas/homs-investigation-reports-redacted-shareable-packet.pdf",
+      "The District's investigation reports, with private family data removed, gross-note hyperlinks added, and the original redaction indexes preserved after the notes.",
+    href: "/release-assets/plsas/homs-investigation-reports-gross-bubbles-2026-06-25.pdf",
     sourcePath:
-      "report_output/homs_investigation_reports_redacted_packet_2026-06-22/HOMS_Investigation_Reports_Redacted_Shareable_Packet.pdf"
+      "report_output/homs_investigation_reports_gross_bubbles_2026-06-25/HOMS_Investigation_Reports_Gross_Bubbles_Curvy_Icon_2026-06-25.pdf"
   },
   {
     id: "governance-catastrophic-record-integrity",

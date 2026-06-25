@@ -4,6 +4,7 @@ import { RandomRecordButton } from "@/components/RandomRecordButton";
 type LaneHeroProps = {
   title: string;
   kicker: string;
+  className?: string;
   recordHrefs?: string[];
   imageSrc?: string;
   imageAlt?: string;
@@ -14,6 +15,7 @@ type LaneHeroProps = {
 export function LaneHero({
   title,
   kicker,
+  className,
   recordHrefs = [],
   imageSrc = "/images/release-lane-hero.jpg",
   imageAlt = "Compliance Theatre investigation case board",
@@ -23,7 +25,7 @@ export function LaneHero({
   const lines = titleLines ?? [title];
 
   return (
-    <section className="lane-hero">
+    <section className={["lane-hero", className].filter(Boolean).join(" ")}>
       <Image
         src={imageSrc}
         alt={imageAlt}

@@ -6,13 +6,18 @@ export const metadata = pageMetadata({
   title: "FAQ",
   description:
     "Answers about FERPA definitions, red boxes, public records, and why board email receipt proofs matter.",
-  image: heroImages.formBuilder
+  image: heroImages.faq
 });
 
 export default function FaqPage() {
   return (
     <main>
-      <FormHero label="FAQ" />
+      <FormHero
+        label="FAQ"
+        imageSrc="/images/faq-detective-compliance-animals-hero.jpg"
+        imageAlt="Detective answering questions from adorable compliance animals in a cozy investigation office"
+        titleLines={["FAQ"]}
+      />
       <section className="page-shell faq-shell">
         <div className="page-heading">
           <p className="eyebrow">FAQ</p>

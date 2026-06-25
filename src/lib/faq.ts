@@ -10,6 +10,11 @@ export const faqs = [
       "FERPA lets schools disclose education records without consent only under defined exceptions. The question is whether the district can identify the posted category, role, purpose, and legal basis for each person who accessed student records. If they can't, then they shouldn't have been able to see your child's data. If they went at least 2 years without even posting those definitions, and let people see even more of your child's data than you could? That wouldn't be great."
   },
   {
+    question: "How can I learn more?",
+    answer:
+      "You can contact us at stopbullyingpriorlake@gmail.com. This is not our day job, but we will make an effort to reply to questions. We are particularly interested in opportunities to help other families in situations like ours. All of the technology used here, except for the AI models, is open source, and we would be grateful to help anyone who could use it get set up with their own version."
+  },
+  {
     question: "What do the red boxes mean?",
     answer:
       "Red boxes mark private family or minor identifying information removed before publication. Each document includes an index identifying those redactions. Other redactions appear as the district provided them. While preparing these documents, we found it a little bit funny that with only 20% of the record to work with, we were still able to redact all of our private data without destroying the meaning of the record we had been presented with. The red boxes show how information could be shared contrasted to how it was shared.",
@@ -19,6 +24,11 @@ export const faqs = [
     question: "Are these district records?",
     answer:
       "The release pages are built around records, emails, packets, and PDFs received from or sent to public school entities. Private family identifying data has been removed before publication."
+  },
+  {
+    question: "Why does my request form have this weird logo?",
+    answer:
+      "When a person is treated the way we have been treated, we have found there is some healing in speaking truth to power. We include the image on requests sent to bad-actor schools because we believe it accurately captures the ridiculousness of the situation. When the people who have hurt your child have more money, power, and record access than you, any edge is a blessing. We believe the people involved in our case have come to hate that picture because they know what comes on the next page is likely going to be hard to hand-wave away, and we believe that impact helps level the playing field. We understand it is not for everyone, and if it is not helpful for you, there is an option to remove it."
   },
   {
     question: "Why include board emails?",

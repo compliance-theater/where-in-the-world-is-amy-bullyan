@@ -15,6 +15,7 @@ export type RequestPayload = {
   accessorName?: string;
   accessorRole?: string;
   victimAcknowledgement?: boolean;
+  excludeGraphics?: boolean;
 };
 
 type SectionType = "h1" | "h2" | "p" | "bullet";
@@ -169,55 +170,60 @@ function drawMetadataTable(
   return y - rows.length * rowHeight;
 }
 
-async function renderRequestPacket(spec: RequestPacketSpec) {
+async function renderRequestPacket(spec: RequestPacketSpec, options: { excludeGraphics?: boolean } = {}) {
   const doc = await PDFDocument.create();
   const fonts = {
     regular: await doc.embedFont(StandardFonts.Helvetica),
     bold: await doc.embedFont(StandardFonts.HelveticaBold)
   };
-  const logo = await doc.embedPng(await logoBytes());
-  const logoWidth = 169.2;
-  const logoHeight = (logo.height / logo.width) * logoWidth;
+  const excludeGraphics = Boolean(options.excludeGraphics);
+  let pageNumber = 1;
 
-  const cover = doc.addPage([PAGE.width, PAGE.height]);
-  cover.drawImage(logo, { x: (PAGE.width - logoWidth) / 2, y: 544, width: logoWidth, height: logoHeight });
-  let titleSize = 29;
-  while (titleSize > 20 && fonts.bold.widthOfTextAtSize(spec.title, titleSize) > PAGE.width - MARGIN * 2) {
-    titleSize -= 0.5;
+  if (!excludeGraphics) {
+    const logo = await doc.embedPng(await logoBytes());
+    const logoWidth = 169.2;
+    const logoHeight = (logo.height / logo.width) * logoWidth;
+
+    const cover = doc.addPage([PAGE.width, PAGE.height]);
+    cover.drawImage(logo, { x: (PAGE.width - logoWidth) / 2, y: 544, width: logoWidth, height: logoHeight });
+    let titleSize = 29;
+    while (titleSize > 20 && fonts.bold.widthOfTextAtSize(spec.title, titleSize) > PAGE.width - MARGIN * 2) {
+      titleSize -= 0.5;
+    }
+    const titleWidth = fonts.bold.widthOfTextAtSize(spec.title, titleSize);
+    cover.drawText(spec.title, { x: Math.max(MARGIN, (PAGE.width - titleWidth) / 2), y: 489, size: titleSize, font: fonts.bold, color: INK });
+    const subtitleLines = wrapText(spec.subtitle, 400, 11.5, fonts.regular);
+    subtitleLines.forEach((line, index) => {
+      const width = fonts.regular.widthOfTextAtSize(line, 11.5);
+      cover.drawText(line, { x: (PAGE.width - width) / 2, y: 463 - index * 14, size: 11.5, font: fonts.regular, color: MUTED });
+    });
+
+    const rows: Array<[string, string]> = [
+      ["Date submitted", displayDate(spec.submitted)],
+      ["Response violation date", displayDate(spec.deadline)],
+      ["Deadline basis", spec.deadlineLabel],
+      ["Sender", `${spec.senderName}${spec.senderEmail ? `\n${spec.senderEmail}` : ""}`],
+      ["Recipient", spec.recipient],
+      ["Scope", spec.subtitle]
+    ];
+    const afterTableY = drawMetadataTable(cover, rows, 392, fonts);
+    let coverNoteY = afterTableY - 28;
+    coverNoteY = drawWrappedText(
+      cover,
+      "This cover page is an index aid. The formal request body follows on the next page and controls the specific scope, authorities invoked, and requested action.",
+      72,
+      coverNoteY,
+      468,
+      7.8,
+      fonts.regular,
+      { leading: 10.2, color: MUTED }
+    );
+    drawWrappedText(cover, spec.coverDisclaimer, 72, coverNoteY - 14, 468, 7.8, fonts.regular, { leading: 10.2, color: MUTED });
+    drawFooter(doc, cover, pageNumber, fonts);
+    pageNumber += 1;
   }
-  const titleWidth = fonts.bold.widthOfTextAtSize(spec.title, titleSize);
-  cover.drawText(spec.title, { x: Math.max(MARGIN, (PAGE.width - titleWidth) / 2), y: 489, size: titleSize, font: fonts.bold, color: INK });
-  const subtitleLines = wrapText(spec.subtitle, 400, 11.5, fonts.regular);
-  subtitleLines.forEach((line, index) => {
-    const width = fonts.regular.widthOfTextAtSize(line, 11.5);
-    cover.drawText(line, { x: (PAGE.width - width) / 2, y: 463 - index * 14, size: 11.5, font: fonts.regular, color: MUTED });
-  });
-
-  const rows: Array<[string, string]> = [
-    ["Date submitted", displayDate(spec.submitted)],
-    ["Response violation date", displayDate(spec.deadline)],
-    ["Deadline basis", spec.deadlineLabel],
-    ["Sender", `${spec.senderName}${spec.senderEmail ? `\n${spec.senderEmail}` : ""}`],
-    ["Recipient", spec.recipient],
-    ["Scope", spec.subtitle]
-  ];
-  const afterTableY = drawMetadataTable(cover, rows, 392, fonts);
-  let coverNoteY = afterTableY - 28;
-  coverNoteY = drawWrappedText(
-    cover,
-    "This cover page is an index aid. The formal request body follows on the next page and controls the specific scope, authorities invoked, and requested action.",
-    72,
-    coverNoteY,
-    468,
-    7.8,
-    fonts.regular,
-    { leading: 10.2, color: MUTED }
-  );
-  drawWrappedText(cover, spec.coverDisclaimer, 72, coverNoteY - 14, 468, 7.8, fonts.regular, { leading: 10.2, color: MUTED });
-  drawFooter(doc, cover, 1, fonts);
 
   let page = doc.addPage([PAGE.width, PAGE.height]);
-  let pageNumber = 2;
   let y = 724;
 
   function nextPage() {
@@ -340,7 +346,7 @@ function categoryMappingSpec(payload: Required<RequestPayload>): RequestPacketSp
 }
 
 export async function buildCategoryMappingRequestPdf(payload: Required<RequestPayload>) {
-  return renderRequestPacket(categoryMappingSpec(payload));
+  return renderRequestPacket(categoryMappingSpec(payload), { excludeGraphics: payload.excludeGraphics });
 }
 
 function correctionDeadline(start: Date) {
@@ -438,5 +444,5 @@ function correctionSpec(payload: Required<RequestPayload>): RequestPacketSpec {
 }
 
 export async function buildCorrectionRequestPdf(payload: Required<RequestPayload>) {
-  return renderRequestPacket(correctionSpec(payload));
+  return renderRequestPacket(correctionSpec(payload), { excludeGraphics: payload.excludeGraphics });
 }
