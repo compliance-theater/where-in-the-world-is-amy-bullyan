@@ -22,6 +22,11 @@ const receipts = [
     label: "Track the pending PLPD data requests",
     href: "/release-assets/plpd/plpd-data-requests-public-tracker-2026-06-25.xlsx",
     status: "Linked"
+  },
+  {
+    label: "See the requests",
+    href: "/release-assets/plpd/plpd-data-requests-tightly-redacted-2026-06-25.pdf",
+    status: "Linked"
   }
 ];
 
