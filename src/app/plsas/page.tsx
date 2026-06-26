@@ -13,6 +13,7 @@ export const metadata = pageMetadata({
 });
 
 const orderedPlsasIds = [
+  "plsas-cothern-june25-response-thread",
   "plsas-full-autoack-01",
   "governance-homs-titleix-collapse",
   "plsas-full-autoack-02",
@@ -58,12 +59,37 @@ export default function PlsasPage() {
             each document. Any other redactions shown are part of the record as it was provided.
           </p>
           <p>Redacted materials only. Native originals stay off the public table.</p>
+          <p className="plpd-updated">Updated June 26, 2026</p>
         </div>
+        <section className="plpd-section plpd-article">
+          <h2>The fox is STILL guarding the henhouse</h2>
+          <p>
+            Amazingly, PLSAS emailed us today. Not surprisingly, it was Mr. Robert Cothern. His prior
+            responses have created a recurring accuracy problem, and the unresolved records universe made
+            this one worth preserving before anyone had to spend the evening with it.
+          </p>
+          <p>Here is the bet I would have been comfortable making before opening it:</p>
+          <ol>
+            <li>He did not provide the overdue record-request productions.</li>
+            <li>
+              He still did not acknowledge our May 18 data request, the one that will show whether the
+              Title IX appeal denial was made without reviewing the underlying facts or after reviewing
+              contradictory evidence. That matters because this is their Title IX Coordinator, the person
+              charged with making sure complaints are handled fairly.
+            </li>
+          </ol>
+          <p>
+            We are in too good of a mood to deal with him right now, so we preserved the Gmail-thread source,
+            built public-redacted fake-native renders, and bundled the district message with the same-thread
+            response draft. Tomorrow we can compare the record against actual reality. Tonight, Compliance
+            Theater built the PDF and the receipt can speak for itself.
+          </p>
+        </section>
         <StartHere
           artifacts={artifacts}
           ids={[
+            "plsas-cothern-june25-response-thread",
             "homs-investigation-reports-redacted-packet",
-            "administrator-packet",
             "daily-status-tracker-combined-2026-06-23"
           ]}
         />
