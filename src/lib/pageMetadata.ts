@@ -26,6 +26,12 @@ export const heroImages = {
     height: 887,
     alt: "Compliance Theatre investigation case board"
   },
+  mde: {
+    url: "/images/mde-compliance-kitty-hero-og.jpg",
+    width: 1200,
+    height: 630,
+    alt: "Compliance Kitty and a document owl confronting a distorted justice building"
+  },
   plpd: {
     url: "/images/plpd-hero.jpg",
     width: 1451,

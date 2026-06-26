@@ -196,6 +196,24 @@ nav a {
   line-height: 1.02;
 }
 
+.mde-hero::after {
+  background:
+    linear-gradient(135deg, rgba(5, 8, 20, 0.9) 0%, rgba(5, 8, 20, 0.68) 26%, rgba(5, 8, 20, 0.18) 48%, rgba(5, 8, 20, 0) 72%),
+    linear-gradient(90deg, rgba(5, 8, 20, 0.5) 0%, rgba(5, 8, 20, 0.18) 34%, rgba(5, 8, 20, 0) 68%);
+}
+
+.mde-hero .lane-hero-copy {
+  left: clamp(18px, 3vw, 42px);
+  max-width: clamp(220px, 22vw, 300px);
+  top: clamp(28px, 5vw, 64px);
+  transform: none;
+}
+
+.mde-hero .lane-hero-copy h1.compact-title {
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: 1;
+}
+
 .form-hero {
   background: #020510;
   overflow: hidden;
@@ -427,9 +445,10 @@ button {
   background: rgba(43, 217, 255, 0.1);
   border: 1px solid var(--line);
   border-radius: 8px;
-  display: flex;
+  display: grid;
   gap: 12px;
-  justify-content: space-between;
+  grid-template-columns: minmax(0, 1fr) 104px;
+  min-height: 58px;
   padding: 14px 16px;
   text-decoration: none;
 }
@@ -437,15 +456,20 @@ button {
 .receipts-list a span {
   color: var(--text);
   font-weight: 900;
+  line-height: 1.2;
+  min-width: 0;
 }
 
 .receipts-list a strong {
   border-radius: 999px;
   flex: 0 0 auto;
   font-size: 12px;
-  letter-spacing: 0.08em;
-  padding: 6px 8px;
-  text-transform: uppercase;
+  justify-self: end;
+  letter-spacing: 0;
+  min-width: 92px;
+  padding: 7px 10px;
+  text-align: center;
+  text-transform: none;
 }
 
 .receipt-status-linked {
@@ -888,8 +912,12 @@ button:disabled {
   }
 
   .receipts-list a {
-    align-items: flex-start;
-    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 86px;
+  }
+
+  .receipts-list a strong {
+    justify-self: start;
   }
 
   .builder-choice {

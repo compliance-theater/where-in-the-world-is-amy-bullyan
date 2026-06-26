@@ -71,5 +71,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: artifact.lane === "PLSAS" ? 0.7 : 0.65
   }));
 
-  return [...pages, ...pdfs];
+  const mdeReceiptPdfs: MetadataRoute.Sitemap = [
+    {
+      url: `${siteUrl}/release-assets/mde/mde-26-240c-special-education-complaint-public-redacted-index-only-2026-06-25.pdf`,
+      lastModified: new Date("2026-06-25T00:00:00.000Z"),
+      changeFrequency: "monthly",
+      priority: 0.65
+    },
+    {
+      url: `${siteUrl}/release-assets/mde/mde-finally-a-fair-hearing-public-redacted-no-index-2026-06-25.pdf`,
+      lastModified: new Date("2026-06-25T00:00:00.000Z"),
+      changeFrequency: "monthly",
+      priority: 0.65
+    },
+    {
+      url: `${siteUrl}/release-assets/mde/mde-whats-wrong-with-mde-records-public-redacted-no-index-2026-06-25.pdf`,
+      lastModified: new Date("2026-06-25T00:00:00.000Z"),
+      changeFrequency: "monthly",
+      priority: 0.65
+    },
+    {
+      url: `${siteUrl}/release-assets/mde/mde-parent-verification-breach-determination-public-redacted-2026-06-25.pdf`,
+      lastModified: new Date("2026-06-25T00:00:00.000Z"),
+      changeFrequency: "monthly",
+      priority: 0.65
+    }
+  ];
+
+  return [...pages, ...pdfs, ...mdeReceiptPdfs];
 }
