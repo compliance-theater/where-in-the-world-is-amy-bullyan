@@ -2,8 +2,9 @@ import { LaneHero } from "@/components/LaneHero";
 import { heroImages, pageMetadata } from "@/lib/pageMetadata";
 
 export const metadata = pageMetadata({
-  title: "PLPD answered the wrong question",
-  description: "the stink makes it's way to PLPD",
+  title: "PLPD Closed the Case Without Saying What It Investigated",
+  description:
+    "The peer assaults reached police. The unanswered question is whether anyone investigated the adult failure-to-report, supervision, and reporting-interference allegations.",
   image: heroImages.plpd
 });
 
@@ -43,8 +44,8 @@ export default function PlpdPage() {
   return (
     <main>
         <LaneHero
-          title="PLPD answered the wrong question"
-          titleLines={["Answered", "the wrong", "question"]}
+          title="PLPD Closed the Case Without Saying What It Investigated"
+          titleLines={["PLPD", "Closed", "Without", "Saying", "What It", "Investigated"]}
           titleSize="compact"
           kicker="PLPD"
           className="plpd-hero"
@@ -60,7 +61,11 @@ export default function PlpdPage() {
                 requests are pending.
               </strong>
             </p>
-            <p className="plpd-updated">Updated June 25, 2026</p>
+            <p className="plpd-dek">
+              The peer assaults reached police. The unanswered question is whether anyone investigated the adult
+              failure-to-report, supervision, and reporting-interference allegations.
+            </p>
+            <p className="plpd-updated">Updated June 26, 2026</p>
             <p>
               A student was reportedly struck in the head five times with a chair or stool during class, in two episodes
               separated by approximately five minutes, causing a concussion.
@@ -232,6 +237,43 @@ export default function PlpdPage() {
               <li>and PLPD refused to identify whether it evaluated the separate adult-conduct allegations.</li>
             </ul>
             <p>A refusal to disclose scope is not proof of a thorough investigation.</p>
+          </section>
+
+          <section className="plpd-section">
+            <h2>Too clever for their own good</h2>
+            <p>
+              Like MDE, PLPD suddenly decided it needed identity and parentage validation before releasing records. If we
+              did not know any better, the symmetry would almost suggest the lawyers were talking to each other. We are
+              not asserting that; presumably there is some other explanation for why two separate agencies suddenly moved
+              into the same record-gating posture at the same time.
+            </p>
+            <p>
+              For PLPD, that gate creates a problem of its own. In school-facility maltreatment matters, parent notice
+              and agency routing are not decorative. The school must notify the parent of an incident that may constitute
+              maltreatment, and MDE must tell the parent within ten days whether it is investigating a report it
+              receives. A screen-out does not make the parent-notice issue disappear; it makes the notice and routing
+              record more important.
+            </p>
+            <p>
+              That was one of the source-backed issues identified in our first follow-up. We repeatedly raised it with
+              PLPD, and we repeatedly offered to provide the written evidence. Adding fuel to the fire, the core source
+              material included with the initial submission identifies us as the child's parents.
+            </p>
+            <p>
+              By requiring us to prove we are the child's parents now, PLPD effectively created a contradiction: if it did
+              not know that basic fact, how thorough could its review of the parent-notice problem have been? Maybe that
+              helps explain why PLPD refused to clarify scope.
+            </p>
+            <p>
+              Thankfully, Compliance Theater was available to come to the rescue. We have filed a correction request
+              identifying the inconsistency and asking PLPD to update the record so it accurately reflects the nature of
+              PLPD's investigation. They have 30 days to respond. If they act like the other agencies and institutions we
+              have had the pleasure of dealing with, they will take all 30 of them.
+            </p>
+            <p>
+              That is fine. This is only the first inconsistency already on the books, and the next batch of requests is
+              waiting for PLPD to produce what has already been asked.
+            </p>
           </section>
 
           <section className="plpd-section">

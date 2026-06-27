@@ -3,9 +3,10 @@ import type { ReleaseArtifact } from "@/lib/releaseArtifacts";
 type StartHereProps = {
   artifacts: ReleaseArtifact[];
   ids: string[];
+  heading?: string;
 };
 
-export function StartHere({ artifacts, ids }: StartHereProps) {
+export function StartHere({ artifacts, ids, heading = "Open the records that explain the rest." }: StartHereProps) {
   const featured = ids
     .map((id) => artifacts.find((artifact) => artifact.id === id))
     .filter(Boolean) as ReleaseArtifact[];
@@ -18,7 +19,7 @@ export function StartHere({ artifacts, ids }: StartHereProps) {
     <section className="start-here" aria-label="Start here">
       <div>
         <p className="eyebrow">Start here</p>
-        <h2>Open the records that explain the rest.</h2>
+        <h2>{heading}</h2>
       </div>
       <div className="start-here-links">
         {featured.map((artifact) => (

@@ -2,9 +2,9 @@ import { LaneHero } from "@/components/LaneHero";
 import { heroImages, pageMetadata } from "@/lib/pageMetadata";
 
 export const metadata = pageMetadata({
-  title: "MDE: proper agency, wrong door",
+  title: "MDE Sent the Child Data First. Then Asked Us to Prove We Were Parents.",
   description:
-    "We brought child-find and special-education concerns to MDE, resubmitted in the requested lane, and are still waiting for oversight to behave like oversight.",
+    "MDE allegedly sent sensitive student and complaint data before later demanding external parent-verification proof to release accountability records.",
   image: heroImages.mde
 });
 
@@ -20,7 +20,7 @@ const receipts = [
     status: "Linked"
   },
   {
-    label: "Packet B: whats wrong with mde records",
+    label: "Packet B: What's Wrong With MDE Records",
     href: "/release-assets/mde/mde-whats-wrong-with-mde-records-public-redacted-no-index-2026-06-25.pdf",
     status: "Linked"
   },
@@ -35,8 +35,8 @@ export default function MdePage() {
   return (
     <main>
       <LaneHero
-        title="MDE: proper agency, wrong door"
-        titleLines={["Proper agency,", "wrong door"]}
+        title="MDE Sent the Child Data First. Then Asked Us to Prove We Were Parents."
+        titleLines={["MDE sent", "the child data", "first.", "Then asked us", "to prove we", "were parents."]}
         titleSize="compact"
         kicker="MDE"
         className="mde-hero"
@@ -53,15 +53,19 @@ export default function MdePage() {
             </p>
             <p className="plpd-updated">Updated June 25, 2026</p>
             <p>
-              Our hope was simple: once we got the information to the proper agencies, something would happen.
+              The timeline is the hook: MDE allegedly sent sensitive student and complaint data first, then later
+              demanded external parent-verification proof before releasing the accountability records needed to
+              understand what it had done.
             </p>
             <p>
-              We had spent months trying to get a straight answer about whether the District's child-find,
+              Our hope had been simple: once we got the information to the proper agencies, something would happen. We
+              had spent months trying to get a straight answer about whether the District's child-find,
               special-education, safety-planning, and educational-access record had actually been reviewed by the people
               responsible for reviewing those things.
             </p>
             <p>
-              MDE was supposed to be the lane for child-find and special-education oversight. So we filed.
+              MDE was supposed to be the lane for child-find and special-education oversight. So we filed. Then the
+              dispute became about gates, lanes, and whether redacted summaries can substitute for actual agency review.
             </p>
           </header>
 
@@ -133,7 +137,7 @@ export default function MdePage() {
             <p>
               So far our experience has been...well, take a look at item #3 in the resubmitted complaint and MDE's
               response, then judge for yourself. The problem with getting cute about access gates is that eventually you
-              have to account for your own prior actions.
+              have to account for your own sequence.
             </p>
             <p>
               Item #3 specifically asks MDE to identify the dates and record basis it used to screen out the child-find
@@ -143,16 +147,18 @@ export default function MdePage() {
             </p>
             <p>
               MDE later stated that it could not verify we were the student's parents without additional external proof.
-              That position creates a very ugly accounting problem: before invoking that gate to withhold the dates and
-              basis it used to screen out the complaint, MDE had already transmitted sensitive private child data to us.
-              If MDE's position is that it did not know whether we were authorized parents, then MDE needs to explain why
-              it was comfortable sending private child data first and only demanding parental authorization when the
-              requested records would show how it screened out the special-education complaint.
+              That position creates a very ugly accounting problem: before invoking that gate to withhold the review
+              dates and screening basis, MDE had already transmitted sensitive private child data to us. If MDE's
+              position is that it did not know whether we were authorized parents, then MDE needs to explain why it was
+              comfortable sending private child data first and only demanding outside proof, such as a birth certificate
+              or equivalent verification, when the requested records would show how it screened out the special-education
+              complaint.
             </p>
             <p>
-              Privacy laws exist to protect children, not institutions. They should not become a one-way valve where
-              sensitive child data can move out when it is convenient, but the accountability records needed to test an
-              agency decision stay locked behind a newly asserted access barrier. There is only one word for that: gross.
+              That is the one-way privacy valve problem. Privacy laws exist to protect children, not institutions. They
+              should not become a system where sensitive child data can move out when it is convenient, but the
+              accountability records needed to test an agency decision stay locked behind a newly asserted access
+              barrier. There is only one word for that: gross.
             </p>
           </section>
 

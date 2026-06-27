@@ -70,7 +70,7 @@ function ArtifactCard({ artifact }: { artifact: ReleaseArtifact }) {
         </dl>
       </div>
       <a className="button-link" href={artifact.href} target="_blank" rel="noreferrer">
-        Open PDF
+        Read PDF
       </a>
     </article>
   );

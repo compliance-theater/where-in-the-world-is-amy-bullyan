@@ -202,15 +202,19 @@ nav a {
     linear-gradient(90deg, rgba(5, 8, 20, 0.5) 0%, rgba(5, 8, 20, 0.18) 34%, rgba(5, 8, 20, 0) 68%);
 }
 
+.mde-hero {
+  min-height: clamp(320px, 58vw, 520px);
+}
+
 .mde-hero .lane-hero-copy {
   left: clamp(18px, 3vw, 42px);
-  max-width: clamp(220px, 22vw, 300px);
+  max-width: clamp(260px, 26vw, 360px);
   top: clamp(28px, 5vw, 64px);
   transform: none;
 }
 
 .mde-hero .lane-hero-copy h1.compact-title {
-  font-size: clamp(30px, 3.4vw, 44px);
+  font-size: clamp(28px, 3.4vw, 44px);
   line-height: 1;
 }
 
@@ -357,6 +361,13 @@ button {
 .plpd-status {
   color: var(--text) !important;
   font-size: 20px !important;
+}
+
+.plpd-dek {
+  color: var(--text) !important;
+  font-size: 21px !important;
+  font-weight: 800;
+  line-height: 1.4 !important;
 }
 
 .plpd-updated {
@@ -857,11 +868,12 @@ button:disabled {
 
   .brand {
     font-size: 18px;
-    white-space: nowrap;
+    line-height: 1.1;
+    white-space: normal;
   }
 
   .brand span {
-    max-width: none;
+    max-width: calc(100vw - 84px);
   }
 
   nav {

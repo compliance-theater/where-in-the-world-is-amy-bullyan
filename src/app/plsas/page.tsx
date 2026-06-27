@@ -6,7 +6,7 @@ import { heroImages, pageMetadata } from "@/lib/pageMetadata";
 import { artifactsForLane } from "@/lib/releaseArtifacts";
 
 export const metadata = pageMetadata({
-  title: "PLSAS Releases",
+  title: "The District's Own Records Are Having a Fight",
   description:
     "PLSAS board emails, investigation records, and governance notices on maltreatment reporting, Title IX posture, and student-record access.",
   image: heroImages.releaseLane
@@ -47,7 +47,11 @@ export default function PlsasPage() {
   const artifacts = orderPlsasArtifacts();
   return (
     <main>
-      <LaneHero title="PLSAS Releases" kicker="PLSAS" recordHrefs={artifacts.map((artifact) => artifact.href)} />
+      <LaneHero
+        title="The District's Own Records Are Having a Fight"
+        kicker="PLSAS"
+        recordHrefs={artifacts.map((artifact) => artifact.href)}
+      />
       <section className="page-shell lane-body">
         <div className="page-heading lane-summary">
           <p>
@@ -62,7 +66,7 @@ export default function PlsasPage() {
           <p className="plpd-updated">Updated June 26, 2026</p>
         </div>
         <section className="plpd-section plpd-article">
-          <h2>The fox is STILL guarding the henhouse</h2>
+          <h2>PLSAS Emailed Again. The Receipt Got Preserved First.</h2>
           <p>
             Amazingly, PLSAS emailed us today. Not surprisingly, it was Mr. Robert Cothern. His prior
             responses have created a recurring accuracy problem, and the unresolved records universe made
@@ -87,6 +91,7 @@ export default function PlsasPage() {
         </section>
         <StartHere
           artifacts={artifacts}
+          heading="Start with the records that make the rest harder to unsee."
           ids={[
             "plsas-cothern-june25-response-thread",
             "homs-investigation-reports-redacted-packet",
